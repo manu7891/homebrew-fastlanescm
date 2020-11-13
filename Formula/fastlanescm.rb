@@ -1,11 +1,11 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
-class Fastlane < Formula
+class Fastlanescm < Formula
   desc "🚀 The easiest way to automate building and releasing your iOS and Android apps"
   homepage "https://fastlane.tools"
-  url "https://github.com/manu7891/fastlane/archive/netatmo-1.0.0.tar.gz"
-  sha256 "06579ac3b8ea0a3aef6b3d522d92724812a10c419a2a8048dac6fde12b7bdf49"
+  url "https://github.com/manu7891/fastlane/archive/8.0.0.tar.gz"
+  sha256 "b9c0ae27ee7bdc461afc57e1a7d6cd0dc85ffbf45d4d667ed84af58fa8e9c141"
   license "MIT"
 
   # depends_on "cmake" => :build
@@ -14,8 +14,8 @@ class Fastlane < Formula
     ENV["GEM_HOME"] = libexec
     ENV["GEM_PATH"] = libexec
 
-    system "gem", "build", "fastlane.gemspec"
-    system "gem", "install", "fastlane-#{version}.gem", "--no-document"
+    system "gem", "build", "fastlanescm.gemspec"
+    system "gem", "install", "fastlanescm-#{version}.gem", "--no-document"
 
     (bin/"fastlane").write <<~EOS
       #!/bin/bash
